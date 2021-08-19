@@ -8,9 +8,11 @@ const Stream = require('stream').Transform
 const URL = require('url').URL;
 
 //FILE_Picture
-fs.mkdir('PictureCache', (err) => {
-  if (err) { throw err; }
-});
+if(! fs.existsSync('PictureCache')){
+  fs.mkdir('PictureCache', (err) => {
+    if (err) { throw err; }
+  });
+}
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (require('electron-squirrel-startup')) { // eslint-disable-line global-require
