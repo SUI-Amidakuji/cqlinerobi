@@ -1,0 +1,110 @@
+.LOGIN > div > input[type="button"]{
+    font-size: 2em;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 1em;
+    width: 1em;
+    margin: 10px;
+    background-color: white;
+    border: none;
+    border-radius: 1em;
+    transition: background-color 0.1s;
+}
+.LOGIN > div > input[type="button"]:hover{
+    background-color: gainsboro;
+}
+.LOGIN > div > #CLOSE + label{
+    position: absolute;
+    top: -0.05em;
+    right: 0.25em;
+    margin: 1em;
+}
+#LOGIN_CLOSE + label{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: aqua;
+}
+.LOGIN{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+}
+.LOGIN > div{
+    position: absolute;
+    padding: 1em;
+    top: 50%;
+    left: 50%;
+    margin: auto;
+    transform: translateY(-50%) translateX(-50%);
+    background-color: white;
+    border-radius: 1em;
+}
+.LOGIN .TITLE > h2{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+.LOGIN .TITLE > small{
+    font-size: 0.7em;
+}
+.LOGIN .ID{
+    text-align: center;
+}
+.LOGIN .SID{
+    text-align: center;
+}
+.LOGIN .SERVER{
+    text-align: center;
+}
+.LOGIN .URL_ID{
+    text-align: center;
+}
+.LOGIN .URL_ID > textarea{
+    width: 200px;
+}
+.LOGIN .URL > input[type="checkbox"]{
+    display: none;
+}
+.LOGIN .URL{
+    font-size: 0.8em;
+    margin: 1em;
+    text-align: center;
+}
+.LOGIN .URL > label{
+    text-decoration: underline;
+    color:blue;
+    cursor: pointer;
+    display: none;
+}
+#URL_LOGIN:checked ~ .URL_OFF{
+    display: inline;
+}
+#URL_LOGIN ~ .URL_ON{
+    display: inline;
+}
+#URL_LOGIN:checked ~ .URL_ON{
+    display: none;
+}
+.LOGIN .OK{
+    text-align: center;
+}
+.LOGIN .OK > input[type="button"]{
+    font-size: 1em;
+    margin-top: 0.5em;
+    height: 2.5em;
+    width: 60%;
+    cursor: pointer;
+    color: white;
+    background-color: deepskyblue;
+    font-weight: bold;
+    border-radius: 0.5em;
+    border: solid 0.15em dodgerblue;
+}
+.LOGIN .OK > input[type="button"]:hover{
+    background-color: lightskyblue;
+    border-color:  deepskyblue;
+}

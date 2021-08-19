@@ -1,0 +1,568 @@
+body {
+  margin: 0;
+}
+
+p{
+  margin: 0;
+}
+
+body > div > div > div{
+  margin: 5px;
+}
+
+.hidden{
+  display: none;
+}
+
+.opacity_0{
+  opacity: 0;
+}
+.opacity_1{
+  opacity: 1;
+}
+
+.nomg{
+  margin: 0;
+}
+
+.head{
+  background-color: whitesmoke;
+  border-bottom: solid 1px;
+}
+.body{
+  background-color: whitesmoke;
+}
+.foot{
+  background-color: whitesmoke;
+  border-top: solid 1px;
+}
+
+.flex-start{
+  display: flex;
+  justify-content: flex-start;
+}
+.flex-end{
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* icon */
+.icon > img{
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+}
+
+/* head */
+
+.head{
+  height: 80px;
+}
+
+.head > .menu{
+  height: 20px;
+  background-color: whitesmoke;
+}
+
+.head > .menu > .hamburger{
+  margin: 0;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  background-color: gainsboro;
+  -webkit-app-region: drag;
+}
+.head > .menu > .hamburger::after{
+  content: '≡';
+  line-height: 1em;
+  font-size: 1.5em;
+  width: 100%;
+}
+
+.head > .menu > div > .alfa{
+  width: 4em;
+  position: relative;
+}
+.head > .menu > div > .alfa > input[type="range"]{
+  margin: 0;
+  position: absolute;
+  font-size: 4px;
+  top: 1em;
+  height: 0.8em;
+  width: 100%;
+  border-radius: 1em;
+  -webkit-appearance: none;
+  background-color: grey;
+  cursor: hand;
+  cursor:pointer;
+}
+.head > .menu > div > .alfa > input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background-color: white;
+  border: solid 0.8em grey;
+  border-radius: 100%;
+  height: 4em;
+  width : 4em;
+}
+
+.head > .menu > div > span, .head > .menu > div > label{
+  display: block;
+  position: relative;
+  margin-left: 5px;
+  margin-right: 5px;
+  width: 1em;
+  height: 12px;
+}
+
+.head > .menu > div:nth-of-type(3) > span,
+.head > .menu > div:nth-of-type(3) > label{
+  margin: 0;
+  width: 1.5em;
+  height: 100%;
+  transition: all 0.2s;
+}
+
+.head > .menu > div:nth-of-type(3) > .min:hover{
+  background-color: gainsboro;
+}
+.head > .menu > div:nth-of-type(3) > .pin:hover{
+  background-color: gainsboro;
+}
+.head > .menu > div:nth-of-type(3) > .max:hover{
+  display: none;
+  background-color: gainsboro;
+}
+.head > .menu > div:nth-of-type(3) > .close:hover{
+  background-color: red;
+  color: white;
+}
+
+.head > .menu > div:nth-of-type(3){
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.head > .menu > div > .min::after{
+  content: '_';
+  font-size: 1.1em;
+  font-weight: bold;
+  position: absolute;
+  top: -0.35em;
+  left: 0.3em;
+}
+#pin{
+  display: none;
+}
+.head > .menu > div > #pin + .pin::after{
+  content: '';
+  font-size: 1.0em;
+  position: absolute;
+  background-size: 12px;
+  width: 12px;
+  height: 12px;
+  top: 0.28em;
+  left: 0.4em;
+}
+.head > .menu > div > #pin:checked + .pin::after{
+  background-image: url(pict/pin_true.svg);
+}
+.head > .menu > div > #pin + .pin::after{
+  background-image: url(pict/pin_false.svg);
+}
+.head > .menu > div > .close::after{
+  content: '×';
+  font-size: 1.1em;
+  font-weight: bold;
+  position: absolute;
+  top: -0.15em;
+  left: 0.25em;
+}
+#max{
+  display: none;
+}
+.head > .menu > div > #max + .max::after{
+  display: none;
+  content: '';
+  font-size: 1.0em;
+  position: absolute;
+  background-size: 12px;
+  width: 12px;
+  height: 12px;
+  top: 0.28em;
+  left: 0.4em;
+}
+.head > .menu > div > #max:checked + .max::after{
+  display: none;
+  background-image: url(pict/max_true.bmp);
+}
+.head > .menu > div > #max + .max::after{
+  display: none;
+  background-image: url(pict/max_false.bmp);
+}
+.head > .menu > div > .close::after{
+  content: '×';
+  font-size: 1.1em;
+  font-weight: bold;
+  position: absolute;
+  top: -0.15em;
+  left: 0.25em;
+}
+
+.head > .status{
+  height: 60px;
+  background-color: whitesmoke;
+}
+
+.head > .status > div > span, .head > .status > div > label{
+  display: block;
+  position: relative;
+  margin: 5px;
+  background-color: whitesmoke;
+}
+
+.head > .status > div > .icon{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.head > .status > div > .name{
+  margin-top: 1em;
+  line-height: 1em;
+  height: 1em;
+}
+.head > .status > div > .button{
+  margin-top: 1em;
+  width: 1em;
+  height: 1em;
+}
+
+.head > .status > div > .notice{
+  width: 1.5em;
+  cursor: hand;
+  cursor:pointer;
+}
+#notice{
+  display: none;
+}
+.head > .status > div > .notice::after{
+  content: '';
+  position: absolute;
+  background-image:url(pict/ei-silence.svg);
+  background-repeat:  no-repeat;
+  background-size: 1.5em;
+  width: 100%;
+  height: 1.25em;
+  top: -0.25em;
+  left: 0;
+}
+.head > .status > div > #notice:checked + .notice::after{
+  content: '';
+  position: absolute;
+  background-image:url(pict/ei-sound.svg);
+  background-repeat:  no-repeat;
+  background-size: 1.5em;
+  width: 100%;
+  height: 1.25em;
+  top: -0.25em;
+  left: 0;
+}
+
+.head > .status > div > .search{
+  width: 1.5em;
+  height: 1.5em;
+  top: -0.25em;
+  cursor: hand;
+  cursor:pointer;
+}
+.head > .status > div > .search::after{
+  content: '';
+  position: absolute;
+  background-image:url(pict/ifn0403.svg);
+  background-repeat:  no-repeat;
+  background-size: 1.5em;
+  width: 100%;
+  height: 100%;
+  top: 0em;
+  left: 0;
+}
+.head > .status > div > .option{
+  display: none;
+  width: 1.5em;
+  height: 1.5em;
+  top: -0.25em;
+  cursor: hand;
+  cursor:pointer;
+}
+.head > .status > div > .option::after{
+  content: '';
+  display: none;
+  position: absolute;
+  background-image:url(pict/three-reader.svg);
+  background-repeat:  no-repeat;
+  background-size: 1.5em;
+  width: 100%;
+  height: 100%;
+  top: 0em;
+  left: 0;
+}
+
+.head > .status > div:nth-of-type(2){
+  margin-left: auto;
+  margin-right: 0;
+}
+
+/* body */
+
+.body{
+  height: calc(100vh - 71px - 81px);
+  position: relative;
+}
+/* context_menu */
+.sticky{
+  position: sticky;
+  top: 0;
+}
+.body .context_menu_background{
+  margin: 0;
+  height: calc(100vh - 71px - 81px);
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+}
+.body > .content > .date > .main_mes .message{
+  position: relative;
+}
+.body > .content > .date > .main_mes > .icon{
+  position: relative;
+  background-size: 35px;
+}
+.body > .content > .date > .my > .icon{
+  display: none;
+}
+
+/* scroll */
+.body{
+  overflow-y: scroll;
+}
+.body::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+.body::-webkit-scrollbar-thumb{
+  background-color: darkgray;
+  border-radius: 4px;
+}
+.body::-webkit-scrollbar-thumb:hover {
+  background-color: grey;
+}
+.body::-webkit-scrollbar-track {
+  border-radius: 4px;
+}
+.body::-webkit-scrollbar-track:hover {
+  background-color: lightgray;
+}
+
+.body > .content > .date{
+  text-align:center;
+}
+.body > .content > .date > span{
+  position: sticky;
+  top: 0;
+  font-size: 0.9em;
+  color: grey;
+  background-color: rgba(240, 240, 240, 0.9);
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  border-radius: 1em;
+  z-index: 1;
+}
+.body > .content > .date > .main_mes{
+  align-items: flex-start;
+  text-align:left;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+/*myflex*/
+.body > .content > .date > .my{
+  flex-direction : row-reverse;
+}
+.body > .content > .date > .main_mes > .icon{
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  cursor: hand;
+  cursor: pointer;
+}
+.body > .content > .date > .main_mes .pyoko{
+  margin-left: 5px;
+  position: relative;
+  background-color: whitesmoke;
+  height: 40px;
+  width: 10px;
+  overflow: hidden;
+}
+.body > .content > .date > .main_mes .pyoko::before{
+  content: '';
+  font-size: 15px;
+  display: block;
+  height: 2em;
+  width: 1em;
+  background-color: gainsboro;
+  border-radius: 1em 0 0 1em;
+  position: absolute;
+  top:-5px;
+  left:0;
+}
+.body > .content > .date > .main_mes .pyoko::after{
+  content: '';
+  display: block;
+  font-size: 30px;
+  height: 1em;
+  width: 1em;
+  background-color: whitesmoke;
+  border-radius: 0 0 0 1em;
+  position: absolute;
+  top: calc(-0.4em - 5px);
+  left:-0.5em;
+}
+/*mypyoko*/
+.body > .content > .date > .my .pyoko{
+  margin-left: 0px;
+  margin-right: 5px;
+  background-color: whitesmoke;
+}
+.body > .content > .date > .my .pyoko::before{
+  background-color: lightgreen;
+  border-radius: 0 1em 1em 0;
+  top:-5px;
+  left: -5px;
+
+}
+.body > .content > .date > .my .pyoko::after{
+  background-color: whitesmoke;
+  border-radius: 0 0 1em 0;
+  position: absolute;
+  top: calc(-0.4em - 5px);
+  left: -5px;
+}
+/**/
+.body > .content > .date > .main_mes .name{
+  margin: 0;
+  margin-left: calc(0.5em + 10px);
+  text-align: start;
+}
+.body > .content > .date > .main_mes .message{
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  max-width: calc(95vw - 35px - 3.5em - 15px - 5px - 1em);
+  border-radius: 1em;
+  background-color: gainsboro;
+}
+.body > .content > .date > .my .message{
+  background-color: lightgreen;
+}
+.body > .content > .date > .my .name{
+  margin: 0;
+  margin-right: calc(0.5em + 10px);
+  text-align: end;
+}
+.body > .content > .date > .my .name + .flex-start{
+  flex-direction: row-reverse;
+}
+.body > .content > .date > .main_mes > .time{
+  margin-top:auto;
+  color: grey;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+
+/*latestbutton*/
+.body{
+  position: relative;
+}
+.body > .late{
+  margin: 10px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 70px;
+  border: solid 1px;
+  background-color: rgba(220, 220, 220, 0.5);
+  transition: all 0.5s;
+  cursor: hand;
+  cursor:pointer;
+  z-index: 2;
+}
+.body > .late::after{
+  content: '▼';
+  font-size: 1.5em;
+  position: absolute;
+  top: 9%;
+  left: 20%;
+}
+.body > .hide_1{
+  right: 5px;
+}
+.body > .hide_0{
+  right: -52px;
+}
+
+/* foot */
+
+.foot{
+  height: 70px;
+}
+
+.foot > .message {
+  text-align: center;
+}
+
+.foot > .message > input{
+  resize: none;
+  width: 90%;
+  max-width: 30em;
+  height: 1em;
+  padding: 0.5em;
+  margin: 0.2em;
+}
+.foot > .message + .mojisu{
+  position: fixed;
+  text-align: center;
+  bottom: 80px;
+  width: calc(100% - 0.5em);
+  height: 1em;
+  z-index: 1;
+}
+.foot > .message + .mojisu > span{
+  display: none;
+}
+.foot > .message:hover + .mojisu > span{
+  display: inline;
+  font-size: 0.8em;
+  border-radius: 1em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  background-color: rgba(128, 128, 128, 0.5);
+}
+
+.foot > .button{
+  width: 1em;
+  height: 1em;
+}
+
+.foot > .emoji{
+  margin-left: auto;
+  margin-right: 0.5em;
+  background-color: whitesmoke;
+}
+
+.foot > .StringByte{
+  text-align: center;
+  height: 24px;
+  color: red;
+}

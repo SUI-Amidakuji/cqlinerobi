@@ -1,0 +1,42 @@
+.body > .content > .date > .main_mes .icon_server{
+    margin: 0;
+    margin-left: 2em;
+    position: relative;
+}
+.body > .content > .date > .my .icon_server{
+    margin: 0;
+    margin-left: auto;
+    margin-right: 2em;
+}
+.body > .content .main_mes .icon_server::after{
+    content: '';
+    display: block;
+    position: absolute;
+    top:0;
+    left: -1em;
+    width: 1em;
+    height: 1.5em;
+}
+.body > .content .my .icon_server::after{
+    position: absolute;
+    left: auto;
+    right: -1em;
+}
+.body > .content .my .icon_server::after{
+}
+.body > .content .main_mes .icon_server::after{
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.body > .content .main_mes .sun::after{
+    background-image: url(../../../PictureCache/sv1.gif);
+}
+.body > .content .main_mes .moon::after{
+    background-image: url(../../../PictureCache/sv2.gif);
+}
+.body > .content .main_mes .mars::after{
+    background-image: url(../../../PictureCache/sv3.gif);
+}
+.body > .content .main_mes .earth::after{
+    background-image: url(../../../PictureCache/sv4.gif);
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>cqlinerobi</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="metamorphose.css">
+    <link rel="stylesheet" href="login.css">
+
+    <script src="./he/he.js"></script>
+
+    <script src="body.js"></script>
+    <script src="foot.js"></script>
+    <script src="metamorphose.js"></script>
+    <script src="login.js"></script>
+    <script src="main.js"></script>
+  </head>
+  <body onload="load();">
+    <div class="LOGIN">
+      <div>
+        <input id="CLOSE" type="button" onclick="LOGIN.Close();">
+        <label for="CLOSE">×</label>
+        <div class="TITLE">
+          <h2>ログイン</h2>
+          <small>※ロビーチャットの表示にはログインが必要です</small>
+        </div>
+        <hr>
+        <div class="ID">
+          <div>ユーザーID</div>
+          <input type="text" placeholder="例:water01">
+        </div>
+        <div class="SID">
+          <div>ユーザーSID</div>
+          <input type="text" placeholder="例:lRpATeMn3o">
+        </div>
+        <div class="SERVER">
+          <div>サーバー</div>
+          <select>
+            <option value="sun">太陽</option>
+            <option value="moon">月</option>
+            <option value="mars">火星</option>
+            <option value="earth">地球</option>
+          </select>
+        </div>
+        <div class="URL_ID hidden">
+          <div>URL</div>
+          <textarea onchange="LOGIN.URLID_ID()" placeholder="例:http://bt.chibiquest.net/cqmain.php?num=water01&sid=lRpATeMn3o&sv_no=3"></textarea>
+        </div>
+        <div class="URL">
+          <input type="checkbox" id="URL_LOGIN" onchange="LOGIN.URL_SHOW_LOGIN(this);">
+          <label class="URL_ON" for="URL_LOGIN">URL貼り付け</label>
+          <label class="URL_OFF" for="URL_LOGIN">ID入力</label>
+        </div>
+        <hr>
+        <div class="OK">
+          <input type="button" value="ログイン" onclick="login_on();LOGIN.Close();">
+        </div>
+      </div>
+    </div>
+    <div class="head">
+      <div class="menu flex-start">
+        <div class="flex-start">
+          <!-- 改行すると\nが選択されちゃうのでしないこと -->
+          <span class="alfa"><input type="range" min="10" max="100" step="10" value="100" onchange="OpacityUpdate(this);"></span>
+        </div>
+        <div class="hamburger"></div>
+        <div class="flex-start nomg">
+          <span class="min" onclick="Minimize();"></span>
+          <input type="checkbox" id="pin" onchange="Pin(this);">
+          <label class="pin button" for="pin"></label>
+          <span class="close" onclick="Close();"></span>
+        </div>
+      </div>
+      <div class="status flex-start">
+        <div class="flex-start">
+          <span class="icon"><img src="./pict/group_icon_default.png"></span>
+          <span class="name">ロビーチャット</span>
+          <input type="checkbox" id="notice">
+          <label class="notice button" for="notice"></label>
+        </div>
+        <div class="flex-start">
+          <span class="option button"></span>
+        </div>
+      </div>
+    </div>
+    <div class="body">
+      <div class="sticky">
+        <!-- 見えない画面で覆うことにより右クリックをの仕様を.messageと共存 -->
+        <div class="context_menu_background"></div>
+      </div>
+      <div class="content">
+      </div>
+
+      <div id="late" class="late hide_0" onclick="BODY.ScrollBottomAction();"></div>
+    </div>
+
+    <div class="foot">
+      <div class="message">
+        <input maxlength="60" placeholder="メッセージを入力" onchange="MessageByteCheck();" onkeypress="Submit_Message(event.keyCode);" onkeyup="Update_Mojisu();">
+      </div>
+      <div class="mojisu">
+        <span>0文字</span>
+      </div>
+      <div class="err StringByte">
+        <p class="hidden">半角60文字以内にしてください。</p>
+      </div>
+      <div class="emoji button hidden"></div>
+    </div>
+  </body>
+</html>
